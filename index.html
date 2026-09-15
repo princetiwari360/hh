@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Himanshu Tiwary — Content Creator</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+:root{
+    --bg:#ffffff;
+    --text:#111111;
+    --muted:#707070;
+    --light:#f5f5f5;
+    --border:#e8e8e8;
+    --accent:#ff3b30;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Inter",sans-serif;
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.container{
+    width:min(1180px,calc(100% - 50px));
+    margin:auto;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header{
+    position:relative;
+    z-index:20;
+    background:white;
+    border-bottom:1px solid var(--border);
+}
+
+nav{
+    height:82px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-family:"Space Grotesk",sans-serif;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:-1px;
+}
+
+.logo span{
+    color:var(--accent);
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.nav-links a{
+    color:#777;
+    transition:.25s;
+}
+
+.nav-links a:hover{
+    color:#111;
+}
+
+.nav-contact{
+    color:white!important;
+    background:#111;
+    padding:11px 18px;
+    border-radius:7px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    display:grid;
+    grid-template-columns:1fr 430px;
+    gap:90px;
+    align-items:center;
+    min-height:720px;
+    padding:80px 0;
+}
+
+.hero-small{
+    font-size:12px;
+    color:#777;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+.hero-small span{
+    display:inline-block;
+    width:7px;
+    height:7px;
+    background:var(--accent);
+    border-radius:50%;
+    margin-right:8px;
+}
+
+.hero h1{
+    font-family:"Space Grotesk",sans-serif;
+    font-size:clamp(65px,8vw,108px);
+    line-height:.92;
+    letter-spacing:-6px;
+    font-weight:700;
+}
+
+.hero h1 span{
+    color:#777;
+}
+
+.hero-description{
+    max-width:540px;
+    color:#6e6e6e;
+    font-size:16px;
+    line-height:1.8;
+    margin-top:30px;
+}
+
+.hero-actions{
+    display:flex;
+    gap:10px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:14px 20px;
+    border-radius:7px;
+    font-size:12px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.button-dark{
+    background:#111;
+    color:white;
+}
+
+.button-dark:hover{
+    transform:translateY(-3px);
+}
+
+.button-outline{
+    border:1px solid #ddd;
+}
+
+.button-outline:hover{
+    border-color:#111;
+    transform:translateY(-3px);
+}
+
+
+/* HERO IMAGE */
+
+.hero-image{
+    position:relative;
+}
+
+.hero-image-frame{
+    width:100%;
+    height:560px;
+    overflow:hidden;
+    background:#eee;
+}
+
+.hero-image-frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center top;
+}
+
+.image-caption{
+    position:absolute;
+    left:20px;
+    bottom:20px;
+    background:white;
+    padding:14px 17px;
+}
+
+.image-caption small{
+    display:block;
+    color:#888;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.image-caption strong{
+    font-size:14px;
+}
+
+
+/* =========================
+   INTRO STRIP
+========================= */
+
+.intro-strip{
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+    padding:25px 0;
+}
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:30px;
+}
+
+.intro-item{
+    border-right:1px solid var(--border);
+}
+
+.intro-item:last-child{
+    border-right:0;
+}
+
+.intro-item small{
+    color:#999;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+}
+
+.intro-item strong{
+    display:block;
+    margin-top:5px;
+    font-family:"Space Grotesk",sans-serif;
+    font-size:18px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    padding:120px 0;
+}
+
+.section-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:50px;
+    margin-bottom:55px;
+}
+
+.section-number{
+    font-size:11px;
+    color:var(--accent);
+    font-weight:700;
+    margin-bottom:12px;
+}
+
+.section-title{
+    font-family:"Space Grotesk",sans-serif;
+    font-size:clamp(42px,5vw,68px);
+    line-height:.95;
+    letter-spacing:-4px;
+}
+
+.section-description{
+    max-width:390px;
+    color:#777;
+    font-size:14px;
+    line-height:1.8;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:100px;
+}
+
+.about-heading{
+    font-family:"Space Grotesk",sans-serif;
+    font-size:48px;
+    line-height:1;
+    letter-spacing:-3px;
+}
+
+.about-heading span{
+    color:#aaa;
+}
+
+.about-text{
+    color:#6d6d6d;
+    font-size:15px;
+    line-height:1.9;
+    max-width:650px;
+}
+
+.about-text p+p{
+    margin-top:24px;
+}
+
+.about-links{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.about-link{
+    border:1px solid var(--border);
+    padding:10px 15px;
+    border-radius:7px;
+    font-size:11px;
+    font-weight:600;
+    transition:.25s;
+}
+
+.about-link:hover{
+    background:#111;
+    color:white;
+}
+
+
+/* =========================
+   WORK
+========================= */
+
+.work-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.work-card{
+    border:1px solid var(--border);
+    background:#fafafa;
+    overflow:hidden;
+}
+
+.work-preview{
+    height:570px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.work-card:first-child .work-preview{
+    background:#e7e2dc;
+}
+
+.work-card:last-child .work-preview{
+    background:#dedede;
+}
+
+.work-preview:before{
+    content:"REEL";
+    position:absolute;
+    font-family:"Space Grotesk",sans-serif;
+    font-size:150px;
+    font-weight:700;
+    color:#00000008;
+}
+
+.work-play{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:white;
+    position:relative;
+    z-index:2;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.3s;
+}
+
+.work-play:after{
+    content:"";
+    margin-left:4px;
+    border-left:10px solid #111;
+    border-top:7px solid transparent;
+    border-bottom:7px solid transparent;
+}
+
+.work-card:hover .work-play{
+    transform:scale(1.1);
+}
+
+.work-details{
+    padding:22px;
+    background:white;
+}
+
+.work-meta{
+    display:flex;
+    justify-content:space-between;
+    color:#999;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.work-details h3{
+    font-family:"Space Grotesk",sans-serif;
+    font-size:24px;
+    margin-top:10px;
+}
+
+.work-details p{
+    color:#777;
+    font-size:12px;
+    margin-top:5px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    border-top:1px solid var(--border);
+}
+
+.service-list{
+    border-top:1px solid var(--border);
+}
+
+.service{
+    display:grid;
+    grid-template-columns:80px 1fr 1fr 30px;
+    align-items:center;
+    gap:30px;
+    padding:27px 0;
+    border-bottom:1px solid var(--border);
+}
+
+.service-number{
+    color:#999;
+    font-size:11px;
+}
+
+.service h3{
+    font-family:"Space Grotesk",sans-serif;
+    font-size:22px;
+}
+
+.service p{
+    color:#777;
+    font-size:13px;
+}
+
+.service-arrow{
+    font-size:18px;
+}
+
+
+/* =========================
+   COLLABORATION
+========================= */
+
+.collab-box{
+    background:#111;
+    color:white;
+    padding:70px;
+}
+
+.collab-label{
+    color:#888;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:9px;
+    margin-bottom:18px;
+}
+
+.collab-box h2{
+    font-family:"Space Grotesk",sans-serif;
+    font-size:clamp(50px,7vw,90px);
+    line-height:.9;
+    letter-spacing:-5px;
+    max-width:850px;
+}
+
+.collab-box h2 span{
+    color:var(--accent);
+}
+
+.collab-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:40px;
+    margin-top:60px;
+}
+
+.contact-details{
+    display:flex;
+    gap:45px;
+    flex-wrap:wrap;
+}
+
+.contact-detail small{
+    display:block;
+    color:#666;
+    font-size:8px;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    margin-bottom:6px;
+}
+
+.contact-detail a{
+    color:#ddd;
+    font-size:13px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    border-top:1px solid var(--border);
+    padding:30px 0;
+}
+
+.footer{
+    display:flex;
+    justify-content:space-between;
+    color:#888;
+    font-size:10px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .hero{
+        grid-template-columns:1fr;
+        gap:50px;
+        padding-top:110px;
+    }
+
+    .hero-image{
+        width:min(430px,100%);
+        margin:auto;
+    }
+
+    .section-header{
+        display:block;
+    }
+
+    .section-description{
+        margin-top:20px;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .service{
+        grid-template-columns:45px 1fr 25px;
+    }
+
+    .service p{
+        display:none;
+    }
+
+    .collab-bottom{
+        display:block;
+    }
+
+    .collab-bottom .button{
+        margin-top:35px;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .container{
+        width:calc(100% - 28px);
+    }
+
+    nav{
+        height:75px;
+    }
+
+    .nav-links{
+        gap:8px;
+    }
+
+    .nav-links a:not(.nav-contact){
+        display:none;
+    }
+
+    .hero{
+        padding-top:90px;
+        padding-bottom:70px;
+    }
+
+    .hero h1{
+        font-size:62px;
+        letter-spacing:-4px;
+    }
+
+    .hero-description{
+        font-size:14px;
+    }
+
+    .hero-image-frame{
+        height:500px;
+    }
+
+    .intro-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .intro-item{
+        border-right:0;
+        border-bottom:1px solid var(--border);
+        padding-bottom:15px;
+    }
+
+    .intro-item:last-child{
+        border-bottom:0;
+        padding-bottom:0;
+    }
+
+    section{
+        padding:85px 0;
+    }
+
+    .section-title{
+        font-size:47px;
+        letter-spacing:-3px;
+    }
+
+    .work-grid{
+        grid-template-columns:1fr;
+    }
+
+    .work-preview{
+        height:500px;
+    }
+
+    .about-heading{
+        font-size:45px;
+    }
+
+    .service{
+        grid-template-columns:35px 1fr 20px;
+        gap:15px;
+    }
+
+    .service h3{
+        font-size:18px;
+    }
+
+    .collab-box{
+        padding:42px 25px;
+    }
+
+    .collab-box h2{
+        font-size:54px;
+        letter-spacing:-4px;
+    }
+
+    .contact-details{
+        display:grid;
+        gap:23px;
+    }
+
+    .footer{
+        display:block;
+    }
+
+    .footer div+div{
+        margin-top:10px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="container">
+
+<nav>
+
+<a href="#" class="logo">
+HIMANSHU<span>.</span>
+</a>
+
+<div class="nav-links">
+
+<a href="#about">
+About
+</a>
+
+<a href="#work">
+Work
+</a>
+
+<a href="#services">
+Services
+</a>
+
+<a href="#contact" class="nav-contact">
+Contact
+</a>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- HERO -->
+
+<section>
+
+<div class="container hero">
+
+
+<div>
+
+<div class="hero-small">
+<span></span>
+Content Creator
+</div>
+
+
+<h1>
+Himanshu
+<br>
+<span>Tiwary.</span>
+</h1>
+
+
+<p class="hero-description">
+
+I'm a content creator focused on reels, entertainment and
+creative digital content. This portfolio brings my work,
+creator profile and collaboration opportunities together.
+
+</p>
+
+
+<div class="hero-actions">
+
+<a
+href="https://www.instagram.com/himanshureels1/"
+target="_blank"
+class="button button-dark"
+>
+Instagram ↗
+</a>
+
+<a
+href="#work"
+class="button button-outline"
+>
+View My Work
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="hero-image">
+
+<div class="hero-image-frame">
+
+<img
+src="assets/himanshu.jpg"
+alt="Himanshu Tiwary"
+>
+
+</div>
+
+
+<div class="image-caption">
+
+<small>
+Content Creator
+</small>
+
+<strong>
+Himanshu Tiwary
+</strong>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- INTRO -->
+
+<div class="intro-strip">
+
+<div class="container intro-grid">
+
+
+<div class="intro-item">
+
+<small>
+Based Around
+</small>
+
+<strong>
+Digital Content
+</strong>
+
+</div>
+
+
+<div class="intro-item">
+
+<small>
+Specialization
+</small>
+
+<strong>
+Reels & Entertainment
+</strong>
+
+</div>
+
+
+<div class="intro-item">
+
+<small>
+Available For
+</small>
+
+<strong>
+Brand Collaborations
+</strong>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+
+<div class="section-header">
+
+<div>
+
+<div class="section-number">
+01 — ABOUT
+</div>
+
+<h2 class="section-title">
+About Me
+</h2>
+
+</div>
+
+<p class="section-description">
+A little about the creator behind the content.
+</p>
+
+</div>
+
+
+
+<div class="about-grid">
+
+
+<div>
+
+<h3 class="about-heading">
+
+Creator.
+<br>
+
+<span>Storyteller.</span>
+<br>
+
+Entertainer.
+
+</h3>
+
+</div>
+
+
+<div class="about-text">
+
+<p>
+Hey, I'm Himanshu — a content creator passionate about
+creating reels and entertainment content for social media.
+</p>
+
+<p>
+I enjoy turning simple ideas into content that people can
+watch, share and connect with. My focus is on building a
+strong personal brand through consistent and creative content.
+</p>
+
+<p>
+I'm also open to working with brands, businesses and creators
+on promotional campaigns and collaborations.
+</p>
+
+
+<div class="about-links">
+
+<a
+href="https://www.instagram.com/himanshureels1/"
+target="_blank"
+class="about-link"
+>
+Instagram ↗
+</a>
+
+<a
+href="tel:+917320084708"
+class="about-link"
+>
+Call
+</a>
+
+<a
+href="mailto:himanshutiwary000@gmail.com"
+class="about-link"
+>
+Email
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- WORK -->
+
+<section id="work" style="background:#f7f7f7;">
+
+<div class="container">
+
+
+<div class="section-header">
+
+<div>
+
+<div class="section-number">
+02 — SELECTED WORK
+</div>
+
+<h2 class="section-title">
+My Work
+</h2>
+
+</div>
+
+<p class="section-description">
+A selection of reels and short-form content.
+Click a project to watch the original reel.
+</p>
+
+</div>
+
+
+
+<div class="work-grid">
+
+
+<a
+href="https://www.instagram.com/reel/Dai4E0GTGl4/"
+target="_blank"
+class="work-card"
+>
+
+
+<div class="work-preview">
+
+<div class="work-play"></div>
+
+</div>
+
+
+<div class="work-details">
+
+<div class="work-meta">
+
+<span>
+Reel 01
+</span>
+
+<span>
+Instagram ↗
+</span>
+
+</div>
+
+<h3>
+Featured Reel
+</h3>
+
+<p>
+Watch the original content on Instagram.
+</p>
+
+</div>
+
+
+</a>
+
+
+
+<a
+href="https://www.instagram.com/reel/Dai1-Q9z4lo/"
+target="_blank"
+class="work-card"
+>
+
+
+<div class="work-preview">
+
+<div class="work-play"></div>
+
+</div>
+
+
+<div class="work-details">
+
+<div class="work-meta">
+
+<span>
+Reel 02
+</span>
+
+<span>
+Instagram ↗
+</span>
+
+</div>
+
+<h3>
+Featured Reel
+</h3>
+
+<p>
+Watch the original content on Instagram.
+</p>
+
+</div>
+
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+
+<div class="section-header">
+
+<div>
+
+<div class="section-number">
+03 — WHAT I DO
+</div>
+
+<h2 class="section-title">
+Services
+</h2>
+
+</div>
+
+<p class="section-description">
+Ways brands and businesses can work with Himanshu.
+</p>
+
+</div>
+
+
+
+<div class="service-list">
+
+
+<div class="service">
+
+<div class="service-number">
+01
+</div>
+
+<h3>
+Reels & Short-form Content
+</h3>
+
+<p>
+Creative social-first video content designed for engagement.
+</p>
+
+<div class="service-arrow">
+→
+</div>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">
+02
+</div>
+
+<h3>
+Brand Collaborations
+</h3>
+
+<p>
+Promotional content created around relevant products and brands.
+</p>
+
+<div class="service-arrow">
+→
+</div>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">
+03
+</div>
+
+<h3>
+Product Promotions
+</h3>
+
+<p>
+Content and promotions designed to introduce products to audiences.
+</p>
+
+<div class="service-arrow">
+→
+</div>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">
+04
+</div>
+
+<h3>
+Social Media Content
+</h3>
+
+<p>
+Creative ideas and content for social-first campaigns.
+</p>
+
+<div class="service-arrow">
+→
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+
+<div class="collab-box">
+
+<div class="collab-label">
+04 — COLLABORATION
+</div>
+
+
+<h2>
+Have a project?
+<br>
+Let's <span>work together.</span>
+</h2>
+
+
+<div class="collab-bottom">
+
+
+<div class="contact-details">
+
+
+<div class="contact-detail">
+
+<small>
+Phone
+</small>
+
+<a href="tel:+917320084708">
++91 73200 84708
+</a>
+
+</div>
+
+
+<div class="contact-detail">
+
+<small>
+Email
+</small>
+
+<a href="mailto:himanshutiwary000@gmail.com">
+himanshutiwary000@gmail.com
+</a>
+
+</div>
+
+
+<div class="contact-detail">
+
+<small>
+Instagram
+</small>
+
+<a
+href="https://www.instagram.com/himanshureels1/"
+target="_blank"
+>
+@himanshureels1
+</a>
+
+</div>
+
+
+</div>
+
+
+<a
+href="mailto:himanshutiwary000@gmail.com?subject=Collaboration%20Enquiry"
+class="button"
+style="background:#ff3b30;color:white;"
+>
+Start a Conversation →
+</a>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+<div class="container footer">
+
+<div>
+© 2026 Himanshu Tiwary
+</div>
+
+<div>
+Content Creator · @himanshureels1
+</div>
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
